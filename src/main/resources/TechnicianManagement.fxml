@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox
+        xmlns="http://javafx.com/javafx/8"
+        xmlns:fx="http://javafx.com/fxml"
+        fx:controller="com.lawnmower.control.TechnicianController">
+
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <children>
+
+        <GridPane
+                alignment="CENTER"
+                hgap="8"
+                vgap="8">
+
+            <Label text="Technician Management"
+                   GridPane.columnIndex="0"
+                   GridPane.rowIndex="0">
+                <font>
+                    <Font name="Arial Black" size="24.0" />
+                </font>
+            </Label>
+
+            <Label
+                    text="Technicians"
+                    GridPane.columnIndex="0"
+                    GridPane.rowIndex="1"/>
+
+            <ListView
+                    GridPane.columnIndex="0"
+                    GridPane.rowIndex="2"
+                    prefHeight="400"
+                    prefWidth="50"
+                    fx:id="techList">
+
+            </ListView>
+
+            <VBox
+                    GridPane.rowIndex="2"
+                    GridPane.columnIndex="1"
+                    spacing="8">
+
+                <Button
+                        text="print weekly assignments"
+                        prefWidth="250"
+                        onAction="#printWeekly"/>
+
+                <Button
+                        text="view assigned customers"
+                        prefWidth="250"
+                        onAction="#viewAssingedCustomers"/>
+
+                <Button
+                        text="technician info"
+                        prefWidth="250"
+                        onAction="#techInfo"/>
+
+                <Button
+                        text="edit info"
+                        prefWidth="250"
+                        onAction="#editInfo"/>
+            </VBox>
+
+            <HBox
+                    GridPane.columnIndex="0"
+                    GridPane.rowIndex="3"
+                    spacing="20">
+
+                <Button
+                        text="+"
+                        onAction="#add"
+                />
+
+                <Button
+                        text="-"
+                        onAction="#delete"
+                />
+
+            </HBox>
+
+            <Button
+                    text="back"
+                    alignment="BOTTOM_LEFT"
+                    GridPane.columnIndex="0"
+                    GridPane.rowIndex="4"
+                    onAction="#onPressBack"/>
+
+        </GridPane>
+
+    </children>
+
+</VBox>

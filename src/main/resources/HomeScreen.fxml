@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox
+        xmlns="http://javafx.com/javafx/8"
+        xmlns:fx="http://javafx.com/fxml"
+        fx:controller="com.lawnmower.control.BaseController">
+
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <GridPane prefHeight="600"
+
+              alignment="CENTER"
+              hgap="8"
+              vgap="8">
+
+        <Label text="Lawn Mower Co."
+               GridPane.columnIndex="0"
+               GridPane.rowIndex="0">
+            <font>
+                <Font name="Arial Black" size="36.0" />
+            </font>
+
+        </Label>
+
+        <Button
+                text="Technician Management"
+                fx:id="techMgmtButton"
+                onAction="#navToTechMgmt"
+                prefHeight="20"
+                prefWidth="400"
+                GridPane.columnIndex="0"
+                GridPane.rowIndex="1">
+        </Button>
+
+        <Button
+                text="Customer Management"
+                fx:id="customerMgmtButton"
+                onAction="#navToCustomerMgmt"
+                prefHeight="20"
+                prefWidth="400"
+                GridPane.columnIndex="0"
+                GridPane.rowIndex="2">
+        </Button>
+
+        <Button
+                text="Reporting"
+                fx:id="reportingButton"
+                onAction="#navToReporting"
+                prefHeight="20"
+                prefWidth="400"
+                GridPane.columnIndex="0"
+                GridPane.rowIndex="3">
+        </Button>
+
+    </GridPane>
+
+    <Button
+            text="exit"
+            alignment="BOTTOM_LEFT"
+            onAction="#exit"
+    />
+
+</VBox>
